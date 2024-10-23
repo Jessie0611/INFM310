@@ -1,0 +1,12 @@
+Jane
+Ayers
+4000.00
+Jose
+Barista
+4300.00
+Freda
+Bowen
+6000.00
+Sasha
+Patel
+4200.00

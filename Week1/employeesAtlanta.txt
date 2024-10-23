@@ -1,0 +1,15 @@
+Lena
+Baylor
+6100.00
+Tom
+Brown
+4000.00
+Bob
+Chin
+6000.00
+Tony
+Loreda
+5500.00
+Sally
+White
+7000.00
