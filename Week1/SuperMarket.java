@@ -5,55 +5,65 @@
 import javax.swing.*;
 public class SuperMarket
 {
-	public static void main(String args[])
+    public static void main(String args[])
 	{
-		final String HEAD1 = "WEEKLY HOURS WORKED";
-		final String DAY_FOOTER = "          Day Total ";  // Leading spaces are intentional.
-		final String SENTINEL = "done";		// Named constant for sentinel value. 
-		double hoursWorked = 0;       		// Current record hours.
-		String hoursWorkedString = "";   	// String version of hours
-		String dayOfWeek;			// Current record day of week.
-		double hoursTotal = 0;      		// Hours total for a day.
-		String prevDay = ""; 		   	// Previous day of week.
-		boolean done = false;				// loop control
+        final String HEAD1 = "WEEKLY HOURS WORKED";
+        final String DAY_FOOTER = "          Day Total "; // Leading spaces are intentional.
+        final String SENTINEL = "done"; // Named constant for sentinel value.
+        double hoursWorked = 0; // Current record hours.
+        String hoursWorkedString = ""; // String version of hours
+        String dayOfWeek; // Current record day of week.
+        double hoursTotal = 0; // Hours total for a day.
+        String prevDay = ""; // Previous day of week.
+        boolean done = false; // loop control
 
-		System.out.println(); 
-		System.out.println(); 
-		// Print heading.
-		System.out.println(HEAD1);
-		// Print two blank lines.
-		System.out.println(); 
-		System.out.println(); 
+        System.out.println();
+        System.out.println();
+        // Print heading.
+        System.out.println(HEAD1);
+        // Print two blank lines.
+        System.out.println();
+        System.out.println();
 
-		// Read first record 
-		dayOfWeek = JOptionPane.showInputDialog("Enter day of week or done to quit: ");
-		if(dayOfWeek.compareTo(SENTINEL) == 0)
-			done = true;
-		else
-		{
-			hoursWorkedString = JOptionPane.showInputDialog("Enter hours worked: ");
-			hoursWorked = Integer.parseInt(hoursWorkedString); 
-			prevDay = dayOfWeek;
-			hoursTotal = hoursWorked;
-		}
-		while(done == false)
-		{	
-			dayOfWeek = JOptionPane.showInputDialog("Enter day of week or 'done' to quit: ");
+        // Read first record
+        dayOfWeek = JOptionPane.showInputDialog("Enter day of week or done to quit: ");
+        if (dayOfWeek.compareTo(SENTINEL) == 0) {
+            done = true;
+        } else {
+            hoursWorkedString = JOptionPane.showInputDialog("Enter hours worked: ");
+            hoursWorked = Double.parseDouble(hoursWorkedString);
+            prevDay = dayOfWeek;
+            hoursTotal = hoursWorked;
+        }
+
+        while (done == false) {
+            dayOfWeek = JOptionPane.showInputDialog("Enter day of week or 'done' to quit: ");
             if (dayOfWeek.compareTo(SENTINEL) == 0) {
                 done = true;
-		} else {
-			hoursWorkedString = JOptionPane.showInputDialog("Enter hours worked: ");
-			hoursWorked = Double.parseDouble(hoursWorkedString); 
+            } else {
+                hoursWorkedString = JOptionPane.showInputDialog("Enter hours worked: ");
+                hoursWorked = Double.parseDouble(hoursWorkedString);
 
-		}
-		hoursTotal += hoursWorked;
-		if (hoursTotal > 0) {
-            System.out.println(DAY_FOOTER + hoursTotal);
+                // Check for day change
+                if (!dayOfWeek.equals(prevDay)) {
+                    dayChange(prevDay, hoursTotal);
+                    // Reset for new day
+                    prevDay = dayOfWeek;
+                    hoursTotal = 0; // Reset hours total for the new day
+                }
+                hoursTotal += hoursWorked;
+            }
         }
-					
-		System.exit(0);
+        // Print total for the last day if there was any input
+        if (!prevDay.isEmpty() && hoursTotal > 0) {
+            dayChange(prevDay, hoursTotal);
+        }
 
-	} // End of main() method.
-	
-}
+        System.exit(0);
+    }
+
+    // Method to print the total hours for the day
+    public static void dayChange(String day, double totalHours) {
+        System.out.println(day + DAY_FOOTER + totalHours);
+    }
 }
