@@ -1,0 +1,36 @@
+Start
+    String atlantaLine, maconLine
+    String firstName, lastName, salaryString
+    Double salary
+
+    atlantaFile = "employeesAtlanta.txt"
+    maconFile = "employeesMacon.txt"
+    mergedFile = "employeesMerged.txt"
+    
+    //Open files
+    OPEN FileReader atlantaFile
+    OPEN FileReader maconFile
+
+    //Write to new merged file
+    OPEN FileWriter mergedFile
+
+    // Initialize variables and read files
+    READ atlantaLine read next line from atlantaFile
+    READ maconLine read next line from maconFile
+
+    WHILE atlantaLine IS NOT EOF OR maconLine IS NOT EOF
+        IF atlantaLine IS NOT eof and maconLine IS eof
+            WRITE atlantaLine TO mergedFile
+            READ next line from atlantaFile
+        ELSE
+            WRITE maconLine TO mergedFile
+            READ next line from maconFile
+        END IF
+
+    END WHILE
+
+    // Close all files
+    CLOSE atlantaFile
+    CLOSE maconFile
+    CLOSE mergedFile
+END
