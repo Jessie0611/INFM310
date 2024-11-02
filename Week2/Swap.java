@@ -2,7 +2,6 @@
 // the user and performs necessary swaps.  
 // Input:  Three int values. / Output:  The numbers in numerical order. 
 import javax.swing.*;
-
 public class Swap
 {
 	public static void main(String args[]) throws Exception
@@ -27,12 +26,25 @@ public class Swap
 			third = Integer.parseInt(thirdNumber);
 		}
 		
-		// Test to see if the first number is greater than the second number.
-		
-		// Test to see if the second number is greater than the third number.
-		
-		// Test to see if the first number is greater than the second number again.
-		
+		// Sort the numbers using simple comparison and swapping.
+		if (first > second)
+		{
+            temp = first;
+            first = second;
+            second = temp;
+        }
+		if (second > third)
+		{
+            temp = second;
+            second = third;
+            third = temp;
+        }
+        if (first > second)
+		{
+            temp = first;
+            first = second;
+            second = temp;
+        }
 
 		// Print values in numerical order. 
 		System.out.println("Smallest: " + first);
