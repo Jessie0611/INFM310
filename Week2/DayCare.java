@@ -15,8 +15,6 @@ public class DayCare
         String numDaysString;
         String ageString;
         int QUIT = 999;
-        Scanner input = new Scanner(System.in);
-        // This is the work done in the getReady() method
 
         ageString = JOptionPane.showInputDialog("Enter the age of the child or 999 to quit: ");
         age = Integer.parseInt(ageString);
