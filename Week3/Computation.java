@@ -4,14 +4,21 @@ public class Computation
 { 
     public static void main(String[] args)
     {
-        //declarations for v1,v2 and related srings
-        //interative input t oget v1, v2
+        double v1, v2;
+        String vString1, vString2;
         //perform calc
-        CalculateSum(v1,c2);
         //call other calc methods
 
+        vString1 = JOptionPane.showInputDialog("Enter first value: ");
+        v1 = Integer.parseInt(vString1);
+
+        vString2 = JOptionPane.showInputDialog("Enter Second value: ");
+        v2 = Integer.parseInt(vString2);
+
+        CalculateSum(v1,v2);
+
         System.exit(0);
-    }
+    } 
 
 public static void CalculateSum(double n1, double  n2)
 {
