@@ -36,15 +36,12 @@ public class Calculator
 		if (op.equals("+"))
 		{
 			answer = nOne + nTwo;	
-			return answer;
 		}else if (op.equals("-"))
 		{
 			answer = nOne - nTwo;
-			return answer;	
 		}else if(op.equals("*"))
 		{
 			answer = nOne * nTwo;
-			return answer;
 		}else if (op.equals("/"))
 		{
 			if(nTwo == 0)
@@ -54,7 +51,6 @@ public class Calculator
 			}
 			else{
 				answer = nOne/nTwo;
-				return answer;
 			}
 		}else if (op.equals("%")){
 			if(nTwo == 0)
@@ -64,9 +60,9 @@ public class Calculator
 			}
 			else{
 				answer = nOne%nTwo;
-				return answer;
 			}
 		}
+		return answer;
 
 	}
 	
