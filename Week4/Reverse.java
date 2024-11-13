@@ -10,12 +10,14 @@ public class Reverse
 		int x; 
 
 		// Print contents of array
-		
+		System.out.println("Original array:");
+        printArray(numbers);
 		// Call reverseArray method here
 		reverseArray(numbers);
 		//print content of array	
-		
 	
+		System.out.println("Reversed array:");
+        printArray(numbers);
 		// Print contents of reversed array
 		
 		
@@ -35,6 +37,14 @@ public class Reverse
 			values[size-1-index] = temp;
 		}
 	}	
+	public static void printArray(int[] values)
+    {
+        for(int i = 0; i < values.length; i++)
+        {
+            System.out.print(values[i] + " ");
+        }
+        System.out.println();
 
 }
 
+}
