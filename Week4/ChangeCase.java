@@ -7,10 +7,19 @@ public class ChangeCase
 {
 	public static void main(String args[]) 
 	{
-		String sample = "This is a String.";
+		String sample;
 		String result;
-		result = sample.toLowerCase();
-		result = sample.toUpperCase();
 
+		sample = JOptionPane.showInputDialog("Enter a string or 'done' to quit: ");
+
+		while (sample.compareTo("done") != 0)
+		{
+			JOptionPane.showMessageDialog(null,"Lowercase: " +sample.toLowerCase());
+			JOptionPane.showMessageDialog(null, "Uppercase: " +sample.toUpperCase());
+			
+			sample = JOptionPane.showInputDialog("Enter a string or 'done' to quit: ");
+		}
+		System.exit(0);
     }
+
 }
