@@ -28,13 +28,13 @@ public class Reverse
 	// Write reverseArray method here.
 	public static void reverseArray(int[] values)
 	{
-		int index, temp, size;
+		int x, temp, size;
 		size = values.length;
-		for(index = 0; index < size / 2; index++)
+		for(x = 0; x < size / 2; x++)
 		{	//swap current beginning with the end
-			temp = values[index];
-			values[index] = values[size-1-index];
-			values[size-1-index] = temp;
+			temp = values[x];
+			values[x] = values[size-1-x];
+			values[size-1-x] = temp;
 		}
 	}	
 	public static void printArray(int[] values)
