@@ -1,4 +1,5 @@
 //Employee Class Example
+//This can be a stand alone java file, can compile but not run, only creating class not using it yet
 
 public class Employee
 {
