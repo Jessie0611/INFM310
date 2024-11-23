@@ -1,32 +1,50 @@
-Start
-    String atlantaLine, maconLine
-    String firstName, lastName, salaryString
-    Double salary
+START
+    STRING atlantaLine, maconLine
+    STRING firstName, lastName, salaryString
+    DOUBLE salary
 
-    atlantaFile = "employeesAtlanta.txt"
-    maconFile = "employeesMacon.txt"
-    mergedFile = "employeesMerged.txt"
+    STRING atlantaFile = "employeesAtlanta.txt"
+    STRING maconFile = "employeesMacon.txt"
+    STRING mergedFile = "employeesMerged.txt"
     
-    //Open files
+    // Open files
     OPEN FileReader atlantaFile
     OPEN FileReader maconFile
 
-    //Write to new merged file
+    // Open the merged file for writing
     OPEN FileWriter mergedFile
 
-    // Initialize variables and read files
-    READ atlantaLine read next line from atlantaFile
-    READ maconLine read next line from maconFile
+    // Read the first line from both files (first name, last name, salary)
+    READ atlantaLine FROM atlantaFile
+    READ maconLine FROM maconFile
 
-    WHILE atlantaLine IS NOT EOF OR maconLine IS NOT EOF
-        IF atlantaLine IS NOT eof and maconLine IS eof
+    WHILE (atlantaLine IS NOT EOF OR maconLine IS NOT EOF)
+        IF (atlantaLine IS NOT EOF AND maconLine IS EOF)
+            // Only the Atlanta file has remaining records
             WRITE atlantaLine TO mergedFile
-            READ next line from atlantaFile
-        ELSE
+            READ next line FROM atlantaFile
+        ELSE IF (maconLine IS NOT EOF AND atlantaLine IS EOF)
+            // Only the Macon file has remaining records
             WRITE maconLine TO mergedFile
-            READ next line from maconFile
-        END IF
+            READ next line FROM maconFile
+        ELSE
+            // Both files have records, so compare the last names
+            SPLIT atlantaLine INTO firstName, lastName, salaryString
+            SPLIT maconLine INTO firstName, lastName, salaryString
 
+            // Compare the last names to determine which record is smaller
+            IF (atlantaLastName < maconLastName)
+                // Write the Atlanta record to merged file
+                WRITE atlantaLine TO mergedFile
+                // Read the next line from the Atlanta file
+                READ next line FROM atlantaFile
+            ELSE
+                // Write the Macon record to merged file
+                WRITE maconLine TO mergedFile
+                // Read the next line from the Macon file
+                READ next line FROM maconFile
+            END IF
+        END IF
     END WHILE
 
     // Close all files
