@@ -18,9 +18,9 @@ public class SumAndProduct
             numString = JOptionPane.showInputDialog("Enter a number or 0 to quit: ");
             number = Integer.parseInt(numString);
             
-            System.exit(0);
+        }
+        System.exit(0);
     }
-}
     public static void findSum(int num)
     {
         int sum = 0, i;
