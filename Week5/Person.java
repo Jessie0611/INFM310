@@ -10,23 +10,25 @@ public class Person
         this.socialSecurity = "";
     }
 
-    //get method - lastName
+    //get lastName
     public String getLastName()
     {
         return lastName;
     }
 
+    //set lastName
     public void setLastName(String lastName)
     {
         this.lastName = lastName;
     }
 
-    //get method - social
+    //get Social
     public String getSocialSecurity()
     {
         return socialSecurity;
     }
 
+    //set Socail
     public void setSocialSecurityNumber(String socialSecurity) {
         this.socialSecurity = socialSecurity;
     }
