@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class MyRectangleClassProgram
 {
-    public static void main ()
+    public static void main(String[] args)
     {
         Rectangle rectangle1 = new Rectangle();  //calling default constructor to instatiate the object
         Rectangle rectangle2 = new Rectangle();  //calling default constructor to instatiate the object
@@ -12,10 +12,16 @@ public class MyRectangleClassProgram
     rectangle2.setLength(7);
     rectangle2.setWidth(3);
 
-    JOptionPane.showMessageDialog(null,"Rectangle 1 Area: " + Rectangle.getA());
-    JOptionPane.showMessageDialog(null,"Rectangle 1 Perimeter: " + Rectangle.getP());
-    JOptionPane.showMessageDialog(null,"Rectangle 2 Area: " + Rectangle.getA());
-    JOptionPane.showMessageDialog(null,"Rectangle 2 Perimeter: " + Rectangle.getP());
+    rectangle1.calculateArea();
+    rectangle1.calculatePerimeter();
+
+    rectangle2.calculateArea();
+    rectangle2.calculatePerimeter();
+
+    JOptionPane.showMessageDialog(null,"Rectangle 1 Area: " + rectangle1.calculateArea());
+    JOptionPane.showMessageDialog(null,"Rectangle 1 Perimeter: " + rectangle1.calculatePerimeter());
+    JOptionPane.showMessageDialog(null,"Rectangle 2 Area: " + rectangle2.calculateArea());
+    JOptionPane.showMessageDialog(null,"Rectangle 2 Perimeter: " + rectangle2.calculatePerimeter());
     
     }
 }

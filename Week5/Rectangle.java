@@ -1,13 +1,11 @@
 //This project will create 2 rectangle objects, find their area and perimeter: A=lw / P=2(l+w)
-import javax.swing.*;
-
 public class Rectangle
 {
     //data attributes
     private double length;
     private double width;
-    private double A;
-    private double P;
+    public double A;
+    public double P;
 
     //set methods
        public void setLength(double l)
@@ -22,17 +20,17 @@ public class Rectangle
        }
 
        //calculat a&p
-       public void calculateArea(double area)
+       public double calculateArea()
        {
            final double A;
            A = length*width;
-           return;
+           return A;
        }
-       public void calculatePerimeter(double perimeter)
+       public double calculatePerimeter()
        {
            final double P;
            P = 2*(length + width);
-           return;
+           return P;
        }
 
        //get methods
