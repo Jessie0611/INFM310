@@ -18,10 +18,10 @@ public class MyRectangleClassProgram
     rectangle2.calculateArea();
     rectangle2.calculatePerimeter();
 
-    JOptionPane.showMessageDialog(null,"Rectangle 1 Area: " + rectangle1.calculateArea());
-    JOptionPane.showMessageDialog(null,"Rectangle 1 Perimeter: " + rectangle1.calculatePerimeter());
-    JOptionPane.showMessageDialog(null,"Rectangle 2 Area: " + rectangle2.calculateArea());
-    JOptionPane.showMessageDialog(null,"Rectangle 2 Perimeter: " + rectangle2.calculatePerimeter());
+    System.out.println("Rectangle 1 Area: " + rectangle1.calculateArea());
+    System.out.println("Rectangle 1 Perimeter: " + rectangle1.calculatePerimeter());
+    System.out.println("Rectangle 2 Area: " + rectangle2.calculateArea());
+    System.out.println("Rectangle 2 Perimeter: " + rectangle2.calculatePerimeter());
     
     }
 }
