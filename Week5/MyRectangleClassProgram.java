@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 public class MyRectangleClassProgram
 {
     public static void main(String[] args)
