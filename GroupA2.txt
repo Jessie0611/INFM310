@@ -1,0 +1,17 @@
+GROUP A: Exercise 9-7: Using Java's Built-In Methods
+
+1. What does the concat() method do?
+
+2. What data type does the concat() method return?
+
+3. What does the isEmpty() method do?
+
+4. What data type does the isEmpty() method return?
+
+5. How many arguments does the charAt() method require?
+
+6. What is the data type of the argument?
+
+7. Is the startWith() metyhod overloaded?
+
+8. How many versions of the startsWith() method are listed?

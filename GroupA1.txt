@@ -1,0 +1,22 @@
+GROUP A: Exercise 7-2: Accumulating totals in a single-level control.
+
+        if(sectionNum != oldSectionNum)
+        {
+            System.out.println("Section Number " + oldSectionNum);
+            totalSections = sectionNum;
+            oldSectionNum = sectionNum;
+
+        }
+        
+    1. What is the control break variable?
+    oldSectionNum
+    
+    2. T/F The value of the control break variable should never be changed.
+    False, the variable is updated ever time the section number changes.
+    
+    3. Is totalSelections being calculated correctly?
+    No, This only assignes it the value of the sectionNum. You need to increment totalSections variable each time.
+     
+    4. T/F In a control break program, it does not matter if the records in the input file are in a specific order.
+    False, the order of the records matter because the program relies on detecting changes.
+    
