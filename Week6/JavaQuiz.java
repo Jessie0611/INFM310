@@ -9,13 +9,17 @@ class JavaQuiz
 	JavaQuiz()
 	{
 		// Create a JLabel here named labelQuestion with appropriate text. 
-		
+		JFrame frame = new JFrame("?");
+
 		// Create a JLabel here named labelYes with appropriate text.
-		
+		JLabel labelQuestion = new JLabel("Yes.");
+
 		// Create a JLabel here named labelNo with appropriate text. 
-		
+		JLabel labelNo = new JLabel("No.");
+
 		// Create a final JButton here named buttonYes with appropriate text. 
-		
+		JButton buttonYes = new JButton("Yes");
+
 		buttonYes.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				// Set the JPanel background color to yellow. 
@@ -25,6 +29,8 @@ class JavaQuiz
 		});
 
 		// Create a final JButton here named buttonNo with appropriate text. 
+		JButton buttonNo = new JButton("No");
+
 
 		buttonNo.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
