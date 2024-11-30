@@ -66,8 +66,8 @@ class JavaQuiz
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		frame.setContentPane(quiz.myPanel);
-        frame.setSize(420, 180);  // Set the size of the frame
-        frame.setLocationRelativeTo(null);  // Center the window on the screen
+		frame.pack();
+		frame.setLocationRelativeTo(null);  // Center the window on the screen
 		frame.setVisible(true);
 	}
 }
