@@ -8,14 +8,10 @@ class JavaQuiz
 
 	JavaQuiz()
 	{
-		// Create a JLabel here named labelQuestion with appropriate text. 
-		JFrame frame = new JFrame("?");
-
-		// Create a JLabel here named labelYes with appropriate text.
-		JLabel labelQuestion = new JLabel("Yes.");
-
-		// Create a JLabel here named labelNo with appropriate text. 
-		JLabel labelNo = new JLabel("No.");
+		// Create JLabels
+		JLabel labelQuestion = new JLabel("Do you like GUI programming?");
+		JLabel labelYes= new JLabel("Click here to vote Yes.");
+		JLabel labelNo = new JLabel("Click here to vote No.");
 
 		// Create a final JButton here named buttonYes with appropriate text. 
 		JButton buttonYes = new JButton("Yes");
@@ -51,7 +47,6 @@ class JavaQuiz
 		myPanel.add(buttonNo);
 		
 	}
-
 	public static void main(String args[])
 	{
 		JavaQuiz quiz = new JavaQuiz();
