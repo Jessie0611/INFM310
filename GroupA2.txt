@@ -1,17 +1,25 @@
 GROUP A: Exercise 9-7: Using Java's Built-In Methods
 
 1. What does the concat() method do?
+The concat() method appends (concatenate) a string to the end of another string.
 
 2. What data type does the concat() method return?
+String
 
-3. What does the isEmpty() method do?
+3. What does isEmpty() method do?
+The isEmpty() method checks whether a string is empty or not.
 
 4. What data type does the isEmpty() method return?
+Boolean. This method returns true if the string is empty and false if not.
 
 5. How many arguments does the charAt() method require?
+1 argument
 
-6. What is the data type of the argument?
+6. What is the data type of the argument(s)?
+Int, This integer represents the index of the character you want to retrieve from the string.
 
-7. Is the startWith() metyhod overloaded?
+7. Is the startsWith() method overloaded?
+Yes
 
 8. How many versions of the startsWith() method are listed?
+startsWith("String"), and startsWith("String", int) the int being the in where to start in the index.

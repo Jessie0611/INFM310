@@ -9,14 +9,23 @@ GROUP A: Exercise 7-2: Accumulating totals in a single-level control.
         }
         
     1. What is the control break variable?
-    oldSectionNum
+     sectionNum
     
     2. T/F The value of the control break variable should never be changed.
     False, the variable is updated ever time the section number changes.
+    This is false because control breaks detect when variables change so that a 
+    particular logic process can be initiated. If the control break variable did not change,
+    the system would not know when a different section is being processed.
     
     3. Is totalSelections being calculated correctly?
-    No, This only assignes it the value of the sectionNum. You need to increment totalSections variable each time.
+    No. Based on the program, totalSections is being reset to 1 when sectionNum is updated
+    which is an indication that totalSections will continuously loop and not accumulate the total.
+    All sections are not being processed.
+
+    No, This only assignes it the value of the sectionNum. 
+    You need to increment totalSections variable each time.
      
     4. T/F In a control break program, it does not matter if the records in the input file are in a specific order.
-    False, the order of the records matter because the program relies on detecting changes.
+    False, the order of the records matter because the program relies on detecting changes. The control break
+    process can be incorrectly implemented which could make the totals wrong and could yield incorrect outputs.
     
