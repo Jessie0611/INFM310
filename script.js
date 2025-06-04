@@ -16,7 +16,7 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
+//--------------------------------------------------------------------//
 function palindrome(str) {
   str = str.toLowerCase().replace(/\s+/g, '');
   return str === str.split('').reverse().join('');
@@ -24,6 +24,7 @@ function palindrome(str) {
 console.log(palindrome("hannah"));
 console.log(palindrome("racecar"));
 console.log(palindrome("never odd or even"))
+
 
 
 function isPrime(n) {
@@ -38,3 +39,13 @@ function isPrime(n) {
 console.log(isPrime(7));  // true
 console.log(isPrime(4));  // false
 console.log(isPrime(13)); // true
+
+
+function reverseWords(inputString) {
+  const words = inputString.split(' ');
+  const reverse = words.reverse();
+  const result = reverse.join(' ');
+
+  return result;
+}
+console.log(reverseWords("The cat in the hat."))
